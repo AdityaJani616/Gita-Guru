@@ -1,0 +1,121 @@
+    /* Navbar custom styles */
+    .navbar {
+      height: 70px;
+      transition: background-color 0.5s ease, box-shadow 0.3s ease;
+      z-index: 99;
+      top: 0px;
+    }
+  .maincolor {
+  background-color:rgb(189, 183, 107)
+  }
+    .navbar-brand img {
+      width: 80px;
+      height: 80px;
+      transition: transform 0.4s ease-in-out;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+
+    .navbar-brand img:hover {
+      transform: rotateX(15deg) rotateY(15deg) translateZ(20px);
+    }
+
+    .navbar-brand span {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      transition: color 0.5s ease, transform 0.5s ease;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand span:hover {
+      color: #f39c12;
+      transform: scale(1.2);
+      text-shadow: 2px 2px 5px rgba(243, 156, 18, 0.8);
+    }
+
+    .nav-link {
+      font-size: 1.8rem;
+      padding: 20px 30px;
+      position: relative;
+      display: inline-block;
+      transition: color 0.3s ease-in-out;
+      white-space: nowrap;
+      color: rgb(0, 0, 0);
+    }
+
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #f39c12;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: #f39c12;
+    }
+
+    .nav-item svg {
+      font-size: 2.5rem;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-item svg:hover {
+      transform: scale(1.2);
+    }
+
+    .nav-item.nav-link {
+      padding: 0;
+
+    }
+
+    .nav-item.nav-link:hover::before {
+      content: none;
+    }
+
+    .navbar-nav {
+      gap: 15px;
+    }
+
+    /* Additional styles for collapsing and toggling navbar */
+    .navbar-collapse {
+      flex-grow: 0;
+    }
+
+    .navbar-toggler {
+      border: none;
+      outline: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath fill='none' stroke='%23f39c12' stroke-width='2' d='M5 7h20M5 15h20M5 23h20'%3e%3c/path%3e%3c/svg%3e");
+    }
+
+    /* Adjusted SVG font size for the second block */
+    .nav-item svg {
+      font-size: 1.7rem;
+      margin-right: 10px;
+    }
+    .shadow-md {
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .menu-enter {
+      animation: slide-down 0.3s ease-out;
+    }
+    @keyframes slide-down {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+ 
